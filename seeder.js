@@ -23,6 +23,7 @@ const bootcamps = JSON.parse(
 );
 
 // Import into DB
+// Command: node seeder -i
 const importData = async function() {
   try {
     await Bootcamp.create(bootcamps);
@@ -35,6 +36,7 @@ const importData = async function() {
 };
 
 // Delete data
+// Command: node seeder -d
 const deleteData = async function() {
   try {
     await Bootcamp.deleteMany();
