@@ -84,7 +84,7 @@ exports.getBootcamps = asyncHandler(async function(req, res, next) {
 // @access    Public
 exports.getBootcamp = asyncHandler(async function(req, res, next) {
   const bootcamp = await Bootcamp.findById(req.params.id);
-
+  console.log(req.params.id)
   if (!bootcamp) {
     return next(
       new ErrorResponse(`Bootcamp not found with id of ${req.params.id}`, 404)
